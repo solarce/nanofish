@@ -43,13 +43,12 @@ _nanofish_prompt() {
     echo -n "%{${fg[blue]}%}"
   fi
 
+  echo -n "$(git_prompt_info) "
   echo -n '%(!.#.$) '
   echo -n "%{${reset_color}%}"
 }
 
 _nanofish_rprompt() {
-  echo -n "$(git_prompt_info) "
-  echo -n "%{${fg[green]}%}"
   echo -n '%D{%H:%M:%S}'
   echo -n "%{${reset_color}%}"
 }
