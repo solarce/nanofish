@@ -26,15 +26,6 @@ _nanofish_prompt() {
     echo -n "%{${fg[blue]}%}]%{${reset_color}%} "
   fi
 
-  if [[ $UID == 0 ]]; then
-    echo -n "%{${fg[red]}%}"
-  else
-    echo -n "%{${fg[green]}%}"
-  fi
-
-  echo -n "%n%{${reset_color}%}"
-  echo -n "%{${fg[yellow]}%}@%{${reset_color}%}"
-  echo -n "%F{184}%m%{${reset_color}%} "
   echo -n "%F{106}$(_fishy_collapsed_wd)%{${reset_color}%} "
 
   if [[ $KEYMAP == "vicmd" ]]; then
